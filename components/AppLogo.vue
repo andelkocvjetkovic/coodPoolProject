@@ -5,17 +5,16 @@
       flex
       items-center
       justify-center
-      text-white
+      p-2
+      text-2xl text-white
       uppercase
       border
+      rounded
       bg-app-accent
-      text-2xl
-      p-2
       w-11
       h-11
-      rounded
     "
   >
-    <span class="font-bold block">JD</span>
+    <span class="block font-bold">JD</span>
   </div>
 </template>
