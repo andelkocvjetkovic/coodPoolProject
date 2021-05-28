@@ -11,7 +11,7 @@ export const featuresList = [
     uuid: "54c1184d-fb57-4c5f-bc99-8d308a282cbe",
     header: "Starter",
     price: 5,
-    Slug: "/features/StarterIcon.svg",
+    iconSlug: "/features/StarterIcon.svg",
     features: featuresArr,
   },
   {

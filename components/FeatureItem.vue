@@ -1,17 +1,18 @@
 <template>
-  <section
+  <div
     class="
       bg-blue-lightest
-      px-[22px]
+      px-[20px]
       py-[15px]
       w-full
       flex flex-col
       justify-center
       items-center
+      lg:px-[18px]
     "
   >
     <figure>
-      <img :src="featureItem.iconSlug" />
+      <img :src="featureItem.iconSlug" :alt="featureItem.header" />
     </figure>
     <h2 class="text-2xl font-bold text-blue-darkest mt-[6px]">
       {{ featureItem.header }}
@@ -27,14 +28,23 @@
     </ul>
     <AppButtonTeal
       v-if="isPlanSelected"
-      class="w-full mt-2 flex justify-between items-center group"
+      class="
+        mt-2
+        flex
+        justify-center
+        gap-x-[10px]
+        items-center
+        group
+        text-sm
+        lg:w-full
+      "
       ><span>Plan selected</span><AppChecked
     /></AppButtonTeal>
-    <AppButonTransparent class="mt-[6px] w-full">
+    <AppButonTransparent class="mt-[6px] text-sm lg:w-full">
       <span v-if="isPlanSelected">Cancel subscription</span>
       <span v-else>Select plan</span>
     </AppButonTransparent>
-  </section>
+  </div>
 </template>
 
 <script>

@@ -59,6 +59,9 @@ export default {
   },
   computed: {
     ...mapState(["user"]),
+    showCreditCards() {
+      return this.$route.name == "creditcard";
+    },
   },
 };
 </script>
