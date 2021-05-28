@@ -69,4 +69,7 @@ export default {
       ],
     },
   },
+  router: {
+    linkExactActiveClass: "text-blue",
+  },
 };

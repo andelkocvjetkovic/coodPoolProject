@@ -2,30 +2,14 @@
   <AppButtonTeal class="flex items-center group">
     <CreditCardWhite />
     <span class="text-base font-bold ml-[9px]">{{ cardNumber }}</span>
-    <span
-      class="
-        ml-[30px]
-        bg-teal-dark
-        w-[26px]
-        h-[26px]
-        rounded-full
-        flex
-        justify-center
-        items-center
-        lg:group-hover:bg-teal-light
-      "
-    >
-      <CheckIcon />
-    </span>
+    <AppChecked class="ml-[30px]" />
   </AppButtonTeal>
 </template>
 
 <script>
-import CheckIcon from "~/assets/svg/CheckIcon.svg";
 import CreditCardWhite from "~/assets/svg/CreditCardWhite.svg";
 export default {
   components: {
-    CheckIcon,
     CreditCardWhite,
   },
   props: {

@@ -5,9 +5,7 @@
         flex
         items-center
         justify-end
-        sm:max-w-lg
-        sm:mx-auto
-        md:max-w-2xl
+        lg:mx-auto
         lg:max-w-4xl
         xl:max-w-6xl
         2xl:max-w-7xl

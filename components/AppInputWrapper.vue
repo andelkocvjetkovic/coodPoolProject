@@ -1,6 +1,8 @@
 <template>
-  <p class="flex flex-col mt-6">
-    <label :for="labFor" class="text-base md:text-base">{{ labelText }}</label>
+  <p class="flex flex-col">
+    <label :for="labFor" class="text-base md:text-base font-bold">{{
+      labelText
+    }}</label>
     <slot />
   </p>
 </template>

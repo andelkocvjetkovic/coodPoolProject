@@ -1,0 +1,61 @@
+<template>
+  <section
+    class="
+      bg-blue-lightest
+      px-[22px]
+      py-[15px]
+      w-full
+      flex flex-col
+      justify-center
+      items-center
+    "
+  >
+    <figure>
+      <img :src="featureItem.iconSlug" />
+    </figure>
+    <h2 class="text-2xl font-bold text-blue-darkest mt-[6px]">
+      {{ featureItem.header }}
+    </h2>
+    <h3 class="text-2xl font-bold">
+      $ {{ featureItem.price }}
+      <span class="text-gray-dark text-sm">/ per month</span>
+    </h3>
+    <ul class="mt-[25px] text-base text-blue-darkest">
+      <li v-for="(item, i) in featureItem.features" :key="i">
+        {{ item }}
+      </li>
+    </ul>
+    <AppButtonTeal
+      v-if="isPlanSelected"
+      class="w-full mt-2 flex justify-between items-center group"
+      ><span>Plan selected</span><AppChecked
+    /></AppButtonTeal>
+    <AppButonTransparent class="mt-[6px] w-full">
+      <span v-if="isPlanSelected">Cancel subscription</span>
+      <span v-else>Select plan</span>
+    </AppButonTransparent>
+  </section>
+</template>
+
+<script>
+import { mapState } from "vuex";
+
+export default {
+  props: {
+    featureItem: {
+      type: Object,
+      required: true,
+    },
+  },
+  computed: {
+    ...mapState({
+      selectedFeatures: (state) => state.user.selectedFeature,
+    }),
+    isPlanSelected() {
+      return this.selectedFeatures.includes(this.featureItem.uuid);
+    },
+  },
+};
+</script>
+
+<style></style>
