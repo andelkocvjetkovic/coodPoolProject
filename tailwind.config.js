@@ -52,6 +52,7 @@ module.exports = {
   variants: {
     extend: {
       backgroundOpacity: ["active"],
+      ringColor: ["focus"],
     },
   },
   plugins: [],

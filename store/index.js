@@ -4,5 +4,6 @@ export const state = () => ({
     userName: "John Doe",
     email: "john.doe@email.com",
     phoneNumber: "387 61 123 456",
+    selectedFeature: [],
   },
 });

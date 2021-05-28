@@ -15,7 +15,8 @@
     "core-js": "^3.9.1",
     "eslint-plugin-prettier-vue": "^3.0.0",
     "nuxt": "^2.15.3",
-    "nuxt-svg-loader": "^1.2.0"
+    "nuxt-svg-loader": "^1.2.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.0",
