@@ -3,7 +3,7 @@
     <form
       class="
         flex flex-col
-        gap-y-[16px]
+        gap-y-6
         mt-9
         sm:grid sm:grid-cols-2
         sm:gap-x-[25px]

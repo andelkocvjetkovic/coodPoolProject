@@ -40,10 +40,13 @@
       "
       ><span>Plan selected</span><AppChecked
     /></AppButtonTeal>
-    <AppButonTransparent class="mt-[6px] text-sm lg:w-full">
+    <AppNuxtLinkTransparent
+      to="/paymentconfirm"
+      class="mt-[6px] text-sm lg:w-full"
+    >
       <span v-if="isPlanSelected">Cancel subscription</span>
       <span v-else>Select plan</span>
-    </AppButonTransparent>
+    </AppNuxtLinkTransparent>
   </div>
 </template>
 

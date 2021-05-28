@@ -8,6 +8,6 @@
     ]"
     v-on="listeners"
   >
-    <slot>Add Card</slot>
+    <slot></slot>
   </button>
 </template>

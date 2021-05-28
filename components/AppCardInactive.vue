@@ -1,20 +1,21 @@
 <template>
   <AppButtonBlue
-    class="flex items-center bg-blue-lightest lg:hover:bg-blue-light group"
+    class="
+      flex
+      items-center
+      justify-between
+      bg-blue-lightest
+      sm:gap-x-1
+      lg:hover:bg-blue-light
+      group
+    "
   >
     <CreditCardBlue />
-    <span class="text-base font-bold ml-[9px] text-blue-darkest">{{
+    <span class="text-sm xl:text-base lg:text-xs font-bold text-blue-darkest">{{
       cardNumber
     }}</span>
     <span
-      class="
-        ml-[30px]
-        bg-blue-light
-        w-[26px]
-        h-[26px]
-        rounded-full
-        group-hover:bg-blue
-      "
+      class="bg-blue-light w-[26px] h-[26px] rounded-full group-hover:bg-blue"
     >
     </span>
   </AppButtonBlue>
