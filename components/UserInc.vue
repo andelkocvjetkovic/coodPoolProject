@@ -25,7 +25,7 @@ export default {
         var firstLetterName = "N";
         var firstLetterLastName = "N";
         if (typeof state.user.userName == "string") {
-          var [name, lastName] = state.user.userName.split(" ", 2);
+          const [name, lastName] = state.user.userName.split(" ", 2);
 
           if (typeof name == "string" && !!name) {
             firstLetterName = name[0];
