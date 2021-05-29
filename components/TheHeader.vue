@@ -24,7 +24,7 @@
       >
         <HamIcon class="h-[30px] w-[30px]" />
       </button>
-      <UserInfo class="w-[43px] h-[43px]" />
+      <UserInfo />
     </nav>
   </header>
 </template>

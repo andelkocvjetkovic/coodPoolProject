@@ -45,7 +45,7 @@
         >
           <li
             v-for="page in $options.AppInformation"
-            :key="page.hint"
+            :key="page.page"
             class="flex flex-col justify-between items-center"
           >
             <NuxtLink

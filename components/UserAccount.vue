@@ -10,7 +10,9 @@
   >
     <div class="sm:w-1/3 sm:flex-grow lg:w-full">
       <h1 class="font-bold text-2xl text-blue-darkest">Your account</h1>
-      <p class="text-base font-bold text-gray-darkest">
+      <p
+        class="text-sm tracking-tight xl:text-base font-bold text-gray-darkest"
+      >
         You can modify personal information here
       </p>
     </div>
