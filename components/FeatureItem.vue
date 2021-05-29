@@ -7,13 +7,18 @@
       py-[15px]
       w-full
       flex flex-col
-      justify-center
+      justify-start
       items-center
       lg:px-[18px]
     "
   >
     <figure>
-      <img :src="featureItem.iconSlug" :alt="featureItem.header" />
+      <img
+        width="82px"
+        height="84px"
+        :src="featureItem.iconSlug"
+        :alt="featureItem.header"
+      />
     </figure>
     <h2 class="text-2xl font-bold text-blue-darkest mt-[6px]">
       {{ featureItem.header }}
@@ -29,24 +34,18 @@
     </ul>
     <AppButtonTeal
       v-if="isPlanSelected"
-      class="
-        flex
-        justify-center
-        gap-x-[10px]
-        items-center
-        group
-        text-sm
-        lg:w-full
-      "
+      class="flex justify-center gap-x-[10px] items-center group text-sm w-full"
       ><span>Plan selected</span><AppChecked
     /></AppButtonTeal>
     <AppNuxtLinkTransparent
       v-if="isPlanSelected"
       :to="`/paymentplan/${featureItem.uuid}`"
-      class="mt-[6px] text-sm lg:w-full"
+      class="mt-[6px] text-sm w-full"
       >Cancel subscription
     </AppNuxtLinkTransparent>
-    <AppButonTransparent v-else> Select plan </AppButonTransparent>
+    <AppButonTransparent v-else class="w-full">
+      Select plan
+    </AppButonTransparent>
   </div>
 </template>
 
