@@ -41,9 +41,7 @@
         </p>
       </section>
     </div>
-    <section
-      class="mt-[43px] sm:mt-0 sm:w-1/3 sm:flex-grow lg:w-full lg:mt-[43px]"
-    >
+    <section class="mt-[43px] sm:mt-0 sm:w-1/3 lg:w-full lg:mt-[43px]">
       <h3 class="text-base font-bold text-blue-darkest">
         {{ userInformation.name }}
       </h3>

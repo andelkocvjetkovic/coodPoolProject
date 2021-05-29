@@ -35,12 +35,13 @@
             text-gray-dark
             py-4
             pr-5
+            xs:max-w-sm
+            xs:mx-auto
             sm:pr-0
             md:overflow-hidden
             sm:justify-between
             md:max-w-xl
             md:py-2
-            md:mx-auto
           "
         >
           <li
