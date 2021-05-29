@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full py-8 px-2 lg:px-7 bg-blue-lightest">
+  <section class="w-full py-8 px-2 lg:px-7 bg-blue-lightest lg:py-6">
     <h2 class="text-base font-bold text-blue-darkest">Billing information</h2>
     <p class="text-sm text-gray-darkest">
       Overview of your credit card transactions

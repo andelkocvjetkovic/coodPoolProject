@@ -17,7 +17,10 @@
         2xl:max-w-7xl
       "
     >
-      <aside class="lg:col-start-1 lg:col-span-1 lg:row-span-4">
+      <aside
+        v-if="currentUserInfo"
+        class="lg:col-start-1 lg:col-span-1 lg:row-span-4"
+      >
         <UserAccount :user-information="currentUserInfo" />
       </aside>
       <nav
@@ -117,8 +120,7 @@ export default {
         }.bind(this)
       );
       if (item == null) {
-        console.log(this);
-        return this.$nuxt.error({ statusCode: 404 });
+        this.$nuxt.error({ statusCode: 404 });
       }
       return item;
     },

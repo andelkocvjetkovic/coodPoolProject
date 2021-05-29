@@ -45,7 +45,7 @@
         platform features and your payments will be discontinued.
       </p>
       <p class="flex justify-center gap-[9px] mt-6">
-        <AppNuxtLinkTransparent to="/">Cancel</AppNuxtLinkTransparent>
+        <AppButonTransparent @click="goBack">Cancel</AppButonTransparent>
         <AppNuxtLinkTransparent to="/cancelsubs"
           >Confirm</AppNuxtLinkTransparent
         >
@@ -69,6 +69,11 @@ export default {
         return error({ statusCode: 404 });
       }
     }
+  },
+  methods: {
+    goBack() {
+      this.$router.go(-1);
+    },
   },
 };
 </script>

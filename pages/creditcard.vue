@@ -51,7 +51,7 @@ export default {
   },
   methods: {
     addNewCard() {
-      console.log("new card");
+      return false;
     },
   },
 };

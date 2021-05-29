@@ -21,7 +21,7 @@
       $ {{ featureItem.price }}
       <span class="text-gray-dark text-sm">/ per month</span>
     </h3>
-    <ul class="mt-[25px] text-base text-blue-darkest">
+    <ul class="mt-[25px] text-base text-blue-darkest pb-2">
       <li v-for="(item, i) in featureItem.features" :key="i">
         {{ item }}
       </li>
@@ -29,7 +29,6 @@
     <AppButtonTeal
       v-if="isPlanSelected"
       class="
-        mt-2
         flex
         justify-center
         gap-x-[10px]
