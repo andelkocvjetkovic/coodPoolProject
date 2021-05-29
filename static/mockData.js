@@ -30,9 +30,6 @@ export const featuresList = [
   },
 ];
 
-/**
- * hints have same names as pages name
- */
 export const AppInformation = [
   {
     page: "index",
