@@ -10,10 +10,11 @@ export default function (to, from, savedPosition) {
         y: 10,
       };
       position.behavior = "smooth";
+      // Adding a small delay because of jump effect on immediate scroll to anchor
       return new Promise((resolve, reject) => {
         setTimeout(() => {
           resolve(position);
-        }, 20);
+        }, 100);
       });
     }
   }

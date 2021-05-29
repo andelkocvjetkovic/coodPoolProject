@@ -33,41 +33,34 @@ export const featuresList = [
 /**
  * hints have same names as pages name
  */
-export const userInformation = [
+export const AppInformation = [
   {
-    hint: "index",
+    page: "index",
     name: "Personal info",
     component: "MenuIconsUser",
     description:
       "This is the personal info section of your account. Here you can easily change your basic info. After you finish updating this section please click the save changes button",
   },
   {
-    hint: "creditcard",
+    page: "creditcard",
     name: "Your credit cards",
     component: "MenuIconsCreditCard",
     description:
       "Select a valid credit card for your Balance account or add a new card by clicking add new card and filling out the required card information on the left. New card can be selected after being added on the list below. ",
   },
   {
-    hint: "paymentplan",
+    page: "paymentplan",
     name: "Payment plan",
     component: "MenuIconsPayment",
     description:
       "This is the personal info section of your account. Here you can easily change your basic info. After you finish updating this section please click the save changes button ",
   },
   {
-    hint: "billing",
+    page: "billing",
     name: "Billing info",
     component: "MenuIconsBilling",
     description:
       "This is the personal info section of your account. Here you can easily change your basic info. After you finish updating this section please click the save changes button  ",
-  },
-  {
-    hint: "paymentconfirm",
-    name: "Payment plan confirm",
-    component: "MenuIconsPayment",
-    description:
-      "This is the personal info section of your account. Here you can easily change your basic info. After you finish updating this section please click the save changes button",
   },
 ];
 

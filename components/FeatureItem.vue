@@ -41,12 +41,12 @@
       ><span>Plan selected</span><AppChecked
     /></AppButtonTeal>
     <AppNuxtLinkTransparent
-      to="/paymentconfirm"
+      v-if="isPlanSelected"
+      :to="`/paymentplan/${featureItem.uuid}`"
       class="mt-[6px] text-sm lg:w-full"
-    >
-      <span v-if="isPlanSelected">Cancel subscription</span>
-      <span v-else>Select plan</span>
+      >Cancel subscription
     </AppNuxtLinkTransparent>
+    <AppButonTransparent v-else> Select plan </AppButonTransparent>
   </div>
 </template>
 

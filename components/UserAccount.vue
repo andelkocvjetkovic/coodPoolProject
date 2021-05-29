@@ -2,7 +2,7 @@
   <section
     class="
       sm:flex sm:flex-wrap
-      sm:gap-6
+      sm:gap-x-6
       sm:items-center
       lg:flex-col lg:flex-nowrap
       lg:items-stretch
@@ -10,7 +10,7 @@
   >
     <div class="sm:w-1/3 sm:flex-grow lg:w-full">
       <h1 class="font-bold text-2xl text-blue-darkest">Your account</h1>
-      <p class="font-bold text-gray-darkest">
+      <p class="text-base font-bold text-gray-darkest">
         You can modify personal information here
       </p>
     </div>
@@ -26,6 +26,7 @@
         sm:mt-0
         sm:flex-grow
         lg:w-full
+        lg:mt-[27px]
       "
     >
       <UserInc class="w-16 h-16 rounded-full" />
@@ -37,7 +38,9 @@
         </p>
       </section>
     </div>
-    <section class="mt-[43px] sm:mt-0 sm:w-1/3 sm:flex-grow lg:w-full">
+    <section
+      class="mt-[43px] sm:mt-0 sm:w-1/3 sm:flex-grow lg:w-full lg:mt-[43px]"
+    >
       <h3 class="text-base font-bold text-blue-darkest">
         {{ userInformation.name }}
       </h3>

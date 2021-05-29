@@ -1,6 +1,9 @@
 <template>
   <section>
-    <form class="mt-7 flex gap-y-6 flex-col" @submit.prevent="addNewCard">
+    <form
+      class="mt-7 flex gap-y-6 flex-col lg:mt-0 lg:max-w-[450px] lg:mx-auto"
+      @submit.prevent="addNewCard"
+    >
       <AppInputWrapper lab-for="Card-number">
         <AppInput id="Card-number" v-model.trim="card.cardNumber" type="text" />
       </AppInputWrapper>

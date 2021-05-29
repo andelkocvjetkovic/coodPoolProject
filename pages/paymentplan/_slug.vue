@@ -45,8 +45,10 @@
         platform features and your payments will be discontinued.
       </p>
       <p class="flex justify-center gap-[9px] mt-6">
-        <AppButonTransparent>Cancel</AppButonTransparent>
-        <AppButonTransparent>Confirm</AppButonTransparent>
+        <AppNuxtLinkTransparent to="/">Cancel</AppNuxtLinkTransparent>
+        <AppNuxtLinkTransparent to="/cancelsubs"
+          >Confirm</AppNuxtLinkTransparent
+        >
       </p>
     </section>
   </section>
@@ -56,6 +58,18 @@
 import { ourJourney } from "~/static/mockData.js";
 export default {
   ourJourney,
+  middleware({ store, route, error }) {
+    if (!route.params.slug) {
+      return error({ statusCode: 404 });
+    } else {
+      const userHaveFeature = store.state.user.selectedFeature.includes(
+        route.params.slug
+      );
+      if (!userHaveFeature) {
+        return error({ statusCode: 404 });
+      }
+    }
+  },
 };
 </script>
 

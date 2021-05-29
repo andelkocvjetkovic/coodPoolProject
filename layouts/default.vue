@@ -13,14 +13,17 @@
         lg:gap-x-[16px]
         lg:relative
         xl:max-w-6xl
-        xl:gap-x-[37px]
+        xl:gap-x-[30px]
         2xl:max-w-7xl
       "
     >
       <aside class="lg:col-start-1 lg:col-span-1 lg:row-span-4">
         <UserAccount :user-information="currentUserInfo" />
       </aside>
-      <nav id="navBar" class="mt-9 lg:col-start-2 lg:col-span-3 lg:row-span-1">
+      <nav
+        id="navBar"
+        class="mt-9 lg:col-start-2 lg:col-span-3 lg:row-span-1 lg:mt-[77px]"
+      >
         <ul
           class="
             flex
@@ -33,17 +36,18 @@
             md:overflow-hidden
             sm:justify-between
             md:max-w-xl
+            md:py-2
             md:mx-auto
           "
         >
           <li
-            v-for="page in userInformation"
+            v-for="page in $options.AppInformation"
             :key="page.hint"
             class="flex flex-col justify-between items-center"
           >
             <NuxtLink
               :to="{
-                name: page.hint,
+                name: page.page,
                 hash: '#navBar',
               }"
               class="flex flex-col w-full items-center"
@@ -51,7 +55,7 @@
               <span class="w-12 h-12 inline-flex items-center">
                 <component
                   :is="page.component"
-                  :current-active="currentPage == page.hint"
+                  :current-active="currentPage == page.page"
                   class="w-full h-full"
                 />
               </span>
@@ -62,7 +66,7 @@
           </li>
         </ul>
       </nav>
-      <Nuxt class="lg:col-start-2 lg:col-span-3 lg:row-span-3" />
+      <Nuxt class="lg:col-start-2 lg:col-span-3 lg:row-span-3 lg:mt-[30px]" />
     </main>
     <footer
       class="
@@ -85,7 +89,7 @@
       "
     >
       <p class="divide-x-2 divide-blue-dark flex">
-        <a class="pr-1" href="#">Terms&Conditions</a>
+        <a class="pr-1" href="#">Terms & Conditions</a>
         <a class="px-1" href="#">Privacy policy</a>
       </p>
       <p>Version {{ appVersion }}</p>
@@ -94,24 +98,28 @@
 </template>
 <script>
 import { mapState } from "vuex";
-import { userInformation } from "~/static/mockData.js";
+import { AppInformation } from "~/static/mockData.js";
 export default {
-  data() {
-    return {
-      userInformation,
-    };
-  },
+  AppInformation,
   computed: {
     ...mapState(["appVersion"]),
     currentPage() {
-      return this.$route.name;
+      /*
+        splitting by '-' because nuxt add -slug for dynamic pages names
+         example: "paymentplan-slug"
+       */
+      return this.$route.name && this.$route.name.split("-")[0];
     },
     currentUserInfo() {
-      var item = this.userInformation.find(
+      var item = this.$options.AppInformation.find(
         function findByHind(item) {
-          return item.hint == this.currentPage;
+          return item.page === this.currentPage;
         }.bind(this)
       );
+      if (item == null) {
+        console.log(this);
+        return this.$nuxt.error({ statusCode: 404 });
+      }
       return item;
     },
   },
