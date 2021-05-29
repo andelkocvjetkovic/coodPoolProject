@@ -2,6 +2,7 @@
   <div
     class="
       bg-blue-lightest
+      rounded-lg
       px-[20px]
       py-[15px]
       w-full

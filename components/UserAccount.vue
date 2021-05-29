@@ -22,6 +22,7 @@
         gap-x-[11px]
         bg-blue-lightest
         items-center
+        rounded-lg
         sm:w-1/3
         sm:mt-0
         sm:flex-grow
@@ -29,7 +30,7 @@
         lg:mt-[27px]
       "
     >
-      <UserInc class="w-16 h-16 rounded-full" />
+      <UserInc class="w-14 h-14 xl:w-16 xl:h-16 rounded-full lg:p-2" />
       <section class="flex flex-col">
         <h3 class="text-blue-darkest font-bold text-lg">{{ user.userName }}</h3>
         <p class="flex flex-col text-gray-darkest text-sm">

@@ -11,8 +11,6 @@
       border
       rounded
       bg-app-accent
-      w-[43px]
-      h-[43px]
     "
   >
     <span class="block font-bold">{{ userInc }}</span>
