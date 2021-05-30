@@ -14,6 +14,7 @@
     <article
       class="
         px-4
+        md:px-0
         md:flex md:flex-col
         md:justify-center
         md:w-2/3

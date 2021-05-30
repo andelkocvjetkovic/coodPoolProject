@@ -13,7 +13,7 @@
         lg:gap-x-[16px]
         lg:relative
         xl:max-w-6xl
-        xl:gap-x-[30px]
+        xl:gap-x-[19px]
         2xl:max-w-7xl
       "
     >
@@ -25,7 +25,7 @@
       </aside>
       <nav
         id="navBar"
-        class="mt-9 lg:col-start-2 lg:col-span-3 lg:row-span-1 lg:mt-[77px]"
+        class="mt-9 lg:col-start-2 lg:col-span-3 lg:row-span-1 lg:mt-auto"
       >
         <ul
           class="
