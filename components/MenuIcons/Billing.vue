@@ -4,7 +4,7 @@ export default {
   props: {
     currentActive: {
       type: Boolean,
-      require: true,
+      required: true,
     },
   },
   render(h, context) {
