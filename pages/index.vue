@@ -85,7 +85,7 @@ export default {
       }
     },
     checkField(textInput) {
-      return textInput.length > 1;
+      return textInput.trim().length >= 1;
     },
   },
 };
