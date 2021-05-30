@@ -9,8 +9,8 @@
         lg:px-0
         lg:max-w-4xl
         lg:mx-auto
-        lg:grid lg:grid-cols-4 lg:grid-rows-4
-        lg:gap-x-[16px]
+        lg:grid lg:grid-cols-4 lg:grid-rows-page-layout-rows
+        lg:gap-x-[16px] lg:gap-y-[30px]
         lg:relative
         xl:max-w-6xl
         xl:gap-x-[19px]
@@ -70,7 +70,7 @@
           </li>
         </ul>
       </nav>
-      <Nuxt class="lg:col-start-2 lg:col-span-3 lg:row-span-3 lg:mt-[30px]" />
+      <Nuxt class="lg:col-start-2 lg:col-span-3 lg:row-span-3" />
     </main>
     <footer
       class="
@@ -128,11 +128,12 @@ export default {
   },
 };
 </script>
-<style>
+<style lang="postcss">
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  @apply text-blue-darkest bg-white;
 }
 </style>

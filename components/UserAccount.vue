@@ -9,9 +9,11 @@
     "
   >
     <div class="sm:w-1/3 sm:flex-grow lg:w-full">
-      <h1 class="font-bold text-2xl text-blue-darkest">Your account</h1>
+      <h1 class="font-bold text-xl 2xl:text-2xl text-blue-darkest">
+        Your account
+      </h1>
       <p
-        class="text-sm tracking-tight xl:text-base font-bold text-gray-darkest"
+        class="text-sm tracking-tight 2xl:text-base font-bold text-gray-darkest"
       >
         You can modify personal information here
       </p>
@@ -53,12 +55,14 @@
       v-if="showCreditCards"
       class="
         overflow-y-auto
+        max-h-[250px]
         flex flex-col
         gap-y-[13px]
         mt-[14px]
         sm:w-1/3
         sm:flex-grow
         lg:w-[95%]
+        lg:max-h-full
       "
     >
       <AppButtonBlue class="text-left">&#43; Add new Card</AppButtonBlue>

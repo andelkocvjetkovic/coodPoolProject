@@ -2,8 +2,12 @@
   <main><Nuxt /></main>
 </template>
 
-<script>
-export default {};
-</script>
-
-<style></style>
+<style lang="postcss">
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  @apply text-blue-darkest bg-white;
+}
+</style>

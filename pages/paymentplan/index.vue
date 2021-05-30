@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-9 md relative">
+  <section class="mt-9 relative">
     <div
       class="
         flex flex-col

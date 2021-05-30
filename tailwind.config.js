@@ -47,7 +47,11 @@ module.exports = {
       xs: "475px",
       ...defaultTheme.screens,
     },
-    extend: {},
+    extend: {
+      gridTemplateRows: {
+        "page-layout-rows": "170px 1fr 1fr 1fr;",
+      },
+    },
   },
   variants: {
     extend: {
