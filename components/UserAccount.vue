@@ -58,7 +58,7 @@
         mt-[14px]
         sm:w-1/3
         sm:flex-grow
-        lg:w-full
+        lg:w-[95%]
       "
     >
       <AppButtonBlue class="text-left">&#43; Add new Card</AppButtonBlue>
