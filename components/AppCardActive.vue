@@ -1,10 +1,10 @@
 <template>
   <AppButtonTeal class="flex items-center justify-between group sm:gap-x-1">
     <CreditCardWhite />
-    <span class="text-sm lg:text-xs xl:text-base font-bold ml-[]">{{
+    <span class="text-sm lg:text-xs xl:text-base font-bold">{{
       cardNumber
     }}</span>
-    <AppChecked class="ml-[]" />
+    <AppChecked />
   </AppButtonTeal>
 </template>
 
