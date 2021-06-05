@@ -1,19 +1,6 @@
 <template>
-  <div
-    role="presentation"
-    class="
-      flex
-      items-center
-      justify-center
-      p-2
-      text-2xl text-white
-      uppercase
-      border
-      rounded
-      bg-app-accent
-    "
-  >
-    <span class="block font-bold">{{ userInc }}</span>
+  <div role="presentation" class="user-inc">
+    <span class="user-inc__name">{{ userInc }}</span>
   </div>
 </template>
 <script>
@@ -41,3 +28,23 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.user-inc {
+  @extend %text-2xl;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  color: $white;
+  text-transform: uppercase;
+  border-width: 1px;
+  background-color: $accent;
+
+  &__name {
+    display: block;
+    font-weight: bold;
+  }
+}
+</style>

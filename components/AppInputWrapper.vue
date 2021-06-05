@@ -1,10 +1,10 @@
 <template>
-  <p class="flex flex-col">
-    <label :for="labFor" class="text-base md:text-base font-bold">{{
-      labelText
-    }}</label>
-    <slot />
-  </p>
+  <div class="input-wrapper">
+    <label :for="labFor" class="input-wrapper__label">{{ labelText }}</label>
+    <p class="input-wrapper__input">
+      <slot />
+    </p>
+  </div>
 </template>
 <script>
 export default {
@@ -26,3 +26,17 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.375rem;
+  &__label {
+    @extend %text-base;
+    font-weight: bold;
+  }
+  &__input {
+    display: flex;
+  }
+}
+</style>

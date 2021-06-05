@@ -1,14 +1,17 @@
 <template functional>
   <button
     v-bind="data.attrs"
-    :class="[data.class, data.staticClass, 'button-blue']"
+    :class="['card-add', data.class, data.staticClass]"
     v-on="listeners"
   >
-    <slot></slot>
+    &#43; Add new Card
   </button>
 </template>
+
 <style lang="scss">
-.button-blue {
+.card-add {
+  @extend %card-status;
+  font-size: 1rem;
   background: $blue-dark;
   color: $white;
   @extend %button;
@@ -19,7 +22,7 @@
 
   @include respond-to("lg") {
     &:hover {
-      background-color: $blue-dark;
+      background-color: rgba($color: $blue-dark, $alpha: 0.8);
     }
     &:active {
       background-color: rgba($color: $blue-dark, $alpha: 0.6);

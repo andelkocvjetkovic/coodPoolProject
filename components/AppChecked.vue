@@ -3,8 +3,7 @@ import CheckIcon from "~/assets/svg/CheckIcon.svg";
 export default {
   functional: true,
   render(h, context) {
-    var componentClass =
-      " bg-teal-dark  w-[26px] h-[26px] rounded-full flex justify-center items-center lg:group-hover:bg-teal-light";
+    var componentClass = " checked-icon";
     if (context.data.staticClass == null) {
       context.data.staticClass = componentClass;
     } else {
@@ -15,3 +14,16 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+.checked-icon {
+  transition: $transition-colors;
+  transition-timing-function: $ease-in-out;
+  background-color: $teal-dark;
+  width: 1.625rem;
+  height: 1.625rem;
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+</style>

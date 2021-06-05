@@ -1,11 +1,12 @@
 <template functional>
   <input
     v-bind="data.attrs"
-    :class="[
-      data.class,
-      data.staticClass,
-      'w-full text-blue-darkest mt-[6px] rounded-lg  bg-gray-light p-2 focus:outline-none focus:ring-2 focus:ring-app-accent',
-    ]"
+    :class="[data.class, data.staticClass, 'input-field']"
     @input="(e) => listeners['input'](e.target.value)"
   />
 </template>
+<style lang="scss">
+.input-field {
+  @extend %input;
+}
+</style>

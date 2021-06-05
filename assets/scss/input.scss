@@ -1,0 +1,16 @@
+@import "variables";
+@import "button";
+%input {
+  @extend %focus-outline-none;
+
+  display: block;
+  width: 100%;
+  color: $blue-darkest;
+  border-radius: 0.5rem;
+  background-color: $gray-light;
+  border: 2px solid transparent;
+  padding: 0.5rem;
+  &:focus {
+    border: 2px solid $accent;
+  }
+}

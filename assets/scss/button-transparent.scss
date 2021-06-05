@@ -1,0 +1,25 @@
+@import "variables";
+@import "responsive";
+
+%button-transparent {
+  color: $blue-darkest;
+  border: 1px solid $blue-darkest;
+  background-color: rgba($color: $blue-darkest, $alpha: 0);
+  @extend %button;
+
+  &:active {
+    background-color: rgba($color: $blue-darkest, $alpha: 0.6);
+    color: $white;
+  }
+
+  @include respond-to("lg") {
+    &:hover {
+      background-color: rgba($color: $blue-darkest, $alpha: 1);
+      color: $white;
+    }
+    &:active {
+      background-color: rgba($color: $blue-darkest, $alpha: 0.6);
+      color: $white;
+    }
+  }
+}

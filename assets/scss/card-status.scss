@@ -1,0 +1,11 @@
+%flex-center-space {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+%card-status {
+  @extend %flex-center-space;
+  font-weight: bold;
+  min-height: 44px;
+}

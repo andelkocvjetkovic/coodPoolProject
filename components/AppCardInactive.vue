@@ -1,24 +1,9 @@
 <template>
-  <AppButtonBlue
-    class="
-      flex
-      items-center
-      justify-between
-      bg-blue-lightest
-      sm:gap-x-1
-      lg:hover:bg-blue-light
-      group
-    "
-  >
+  <button class="card-inactive">
     <CreditCardBlue />
-    <span class="text-sm xl:text-base lg:text-xs font-bold text-blue-darkest">{{
-      cardNumber
-    }}</span>
-    <span
-      class="bg-blue-light w-[26px] h-[26px] rounded-full group-hover:bg-blue"
-    >
-    </span>
-  </AppButtonBlue>
+    <span class="card-inactive__card-number">{{ cardNumber }}</span>
+    <span class="card-inactive__circle"> </span>
+  </button>
 </template>
 
 <script>
@@ -36,4 +21,53 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+.card-inactive {
+  @extend %button;
+  @extend %card-status;
+  background-color: $blue-lightest;
+
+  &:active {
+    background-color: rgba($color: $blue-dark, $alpha: 0.6);
+  }
+
+  @include respond-to("lg") {
+    &:hover {
+      background-color: $blue-dark;
+    }
+    &:active {
+      background-color: rgba($color: $blue-dark, $alpha: 0.6);
+    }
+  }
+  @include respond-to("sm") {
+    column-gap: 0.25rem;
+  }
+  &:active {
+    background: rgba($color: $blue, $alpha: 0.4);
+  }
+  @include respond-to("lg") {
+    &:hover {
+      background: $blue-light;
+    }
+    &:hover &__circle {
+      background: $blue;
+    }
+    &:active {
+      background: rgba($color: $blue, $alpha: 0.4);
+    }
+  }
+  &__card-number {
+    @extend %text-sm;
+    color: $blue-darkest;
+    @include respond-to("xl") {
+      @include text-base;
+    }
+  }
+  &__circle {
+    background-color: $blue-light;
+    width: 26px;
+    height: 26px;
+    border-radius: 9999px;
+  }
+}
+</style>
