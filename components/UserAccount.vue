@@ -67,7 +67,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .user-account {
   @include respond-to("sm") {
     display: flex;

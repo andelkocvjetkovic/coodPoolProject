@@ -1,16 +1,6 @@
 <template>
-  <section>
-    <form
-      class="
-        flex flex-col
-        gap-y-6
-        mt-9
-        sm:grid sm:grid-cols-2
-        sm:gap-x-[25px]
-        lg:mt-2
-      "
-      @submit.prevent="handleForm"
-    >
+  <section class="home-page">
+    <form class="home-page__form" @submit.prevent="handleForm">
       <AppInputWrapper lab-for="First-name">
         <AppInput
           id="First-name"
@@ -41,17 +31,14 @@
           type="password"
         />
       </AppInputWrapper>
-      <div v-if="errors.length > 0" class="sm:col-span-2 sm:col-start-1">
+      <div v-if="errors.length > 0" class="home-page__form__error">
         <ul class="text-sm text-gray-dark">
           <li v-for="error in errors" :key="error">
             {{ error }}
           </li>
         </ul>
       </div>
-      <AppButtonTeal
-        type="submit"
-        class="sm:col-start-2 lg:absolute bottom-0 right-0"
-      />
+      <AppButtonTeal type="submit" class="home-page__form__button" />
     </form>
   </section>
 </template>
@@ -90,3 +77,37 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.home-page {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+
+    @include respond-to("sm") {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 1.56rem;
+    }
+
+    &__error {
+      @include respond-to("sm") {
+        grid-column-start: 1;
+        grid-column: span 2 / span 2;
+      }
+    }
+
+    &__button {
+      @include respond-to("sm") {
+        grid-column-start: 2;
+      }
+      @include respond-to("lg") {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+}
+</style>

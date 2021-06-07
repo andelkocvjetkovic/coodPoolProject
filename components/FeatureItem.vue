@@ -100,7 +100,7 @@ export default {
     align-items: center;
     column-gap: 0.625rem;
 
-    &:hover .checked-icon {
+    &:hover > * + * {
       background-color: rgba($color: $teal-light, $alpha: 0.7);
     }
   }
