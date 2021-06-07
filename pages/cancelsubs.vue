@@ -1,54 +1,20 @@
 <template>
-  <main
-    class="
-      flex flex-col
-      justify-between
-      h-screen
-      overflow-hidden
-      bg-white
-      gap-y-12
-      md:flex-row
-      md:gap-y-0
-    "
-  >
-    <article
-      class="
-        px-4
-        md:px-0
-        md:flex md:flex-col
-        md:justify-center
-        md:w-2/3
-        md:pl-[50px]
-        lg:pl-[100px]
-        xl:pl-[186px]
-      "
-    >
-      <h1 class="mt-12 text-2xl font-bold text-blue-darkest">
+  <section class="cancel-sub">
+    <article class="cancel-sub__text">
+      <h1 class="cancel-sub__text__title">
         You have cancelled your subscription
       </h1>
-      <h2 class="text-base font-bold text-blue-dark">
+      <p class="cancel-sub__text__text">
         If you wish to continue using our platform please renew your
         subscription
-      </h2>
+      </p>
     </article>
-    <div
-      role="presentation"
-      class="
-        relative
-        flex flex-col
-        justify-end
-        flex-grow
-        bg-blue-dark
-        md:flex-grow-0
-        md:w-1/3
-        md:order-first
-      "
-    >
-      <div class="relative pb-[56%]">
-        <ShopSubscription class="absolute inset-0 w-full h-full" />
+    <div role="presentation" class="cancel-sub__img">
+      <div class="cancel-sub__img__wrapper">
+        <ShopSubscription class="cancel-sub__img__wrapper__img" />
       </div>
     </div>
-  </main>
+  </section>
 </template>
 
 <script>
@@ -59,4 +25,73 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+.cancel-sub {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  overflow: hidden;
+  row-gap: 3rem;
+
+  @include respond-to("md") {
+    flex-direction: row;
+    row-gap: 0;
+  }
+
+  &__text {
+    padding: 0rem 1rem;
+    margin-top: 1rem;
+    @include respond-to("md") {
+      margin-top: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 66.6667%;
+      padding-left: 3.2rem;
+    }
+    @include respond-to("lg") {
+      padding-left: 6.25rem;
+    }
+    @include respond-to("xl") {
+      padding-left: 11.62rem;
+    }
+    &__title {
+      @extend %text-2xl;
+      font-weight: bold;
+      color: $blue-darkest;
+    }
+    &__text {
+      @extend %text-base;
+      font-weight: bold;
+      color: $blue-dark;
+    }
+  }
+
+  &__img {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 1;
+    background-color: $blue-dark;
+
+    @include respond-to("md") {
+      flex-grow: 0;
+      width: 33.3333%;
+      order: -1;
+    }
+    &__wrapper {
+      position: relative;
+      padding-bottom: 56%;
+      &__img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+</style>
