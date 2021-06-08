@@ -116,7 +116,7 @@ export default {
     },
     currentUserInfo() {
       var item = this.$options.AppInformation.find(
-        function findByHind(item) {
+        function findByPageName(item) {
           return item.page === this.currentPage;
         }.bind(this)
       );
